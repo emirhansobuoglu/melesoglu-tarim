@@ -1,4 +1,11 @@
-/*Template Name: Fruitkha - Responsive Bootstrap4 Shop TemplateTemplate URI: Description: Bootstrap template for fruits or any other kind of shopAuthor: Imran HossainAuthor URI: https://imransdesign.com/Version: 1.0*/
+/*
+Template Name: Fruitkha - Responsive Bootstrap4 Shop Template
+Template URI: 
+Description: Bootstrap template for fruits or any other kind of shop
+Author: Imran Hossain
+Author URI: https://imransdesign.com/
+Version: 1.0
+*/
 /* -----------------------------------------------------------------------------
 
 # Base - Genral & Typography
@@ -2070,6 +2077,55 @@ a.video-play-btn {
   z-index: 1;
   overflow: hidden;
 }
+.fabrika {
+  background-image: url(../img/fabrika.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.melesdukkan {
+  background-image: url(../img/melesdükkan.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.melesdukkanonu {
+  background-image: url(../img/melesdukkanonu.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bayilikler {
+  background-image: url(../img/company-logos/bayilikler.png);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
 
 .abt-bg:after {
   position: absolute;
@@ -2151,7 +2207,7 @@ a.video-play-btn {
 }
 
 .feature-bg:after {
-  background-image: url(../img/feature-bg.jpg);
+  background-image: url(../img/melesdukkanonu.jpg);
   position: absolute;
   right: 0;
   top: 0;
