@@ -27,7 +27,7 @@ app.post("/kaydet", (req, res) => {
         return res.status(500).send("Dosya yazılamadı.");
       }
 
-      res.status(200).send("Ürün kaydedildi!");
+      res.status(200).send("Kayıt Başarılı!");
     });
   });
 });

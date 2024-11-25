@@ -1,26 +1,10 @@
 {
   "urunler": [
     {
-      "id": 1,
-      "isim": "Meleşoğlu 3HP Çapa Mak.",
-      "fiyat": 7500,
-      "detay1": "Ürün kendi imalatımız olup, 2 yıl garanti süreci kapsamındadır. Büyük çapa makinalarının giremediği, kullanıcı için yorucu olan makinalara seçenek olrak üretilmiştir.",
-      "detay2": "Fidan dipleri, fasulye, çilek ve hobi bahçeleri için çok uygundur. Bıçakları özel olarak 3mm çelikten üretilmiştir.",
-      "detay3": "Direksiyon, boy ve çapalama derinlik ayarları yapılabilmektedir. Çapalama genişliği 40cm'dir. Motor gücü 3HP'dir. Yerden yüksekliği 100cm. Turuncu ve Kırmızı rengi mevcuttur.",
-      "detay4": "",
-      "detay5": ""
-    },
-    {
-      "id": 2,
-      "isim": "ECHO 621 SX",
-      "fiyat": 20000,
-      "detay1": "2 Yıl garantilidir. Güç : 3.32 kW / 4.5 Hp Pala : 50 cm Zincir : 3/8 - 36 diş Ağırlık (motor) : 6.2 kg Yağ Tipi : 2 zamanlı motor yağı",
-      "detay2": " 0,64 litrelik yakıt kapasitesi ile depoyu tam doldurduğunuzda uzun süreli işlemlerinize kesintisiz devam edebilirsiniz. Güvenli kullanımı destekler nitelikteki zincir freni, zincirin boşa dönmesini engellemeye yardım eder. Konforlu Tasarım Ön ve arka kısmında iki adet tutma yeri bulunur."
-    },
-    {
-      "id": 3,
-      "isim": "Hamur Karma Makinası",
-      "fiyat": 5000
+      "baslik": "sadada",
+      "detay1": "asdsad",
+      "detay2": "asdad",
+      "detay3": "adsadad"
     }
   ],
   "hakkimda": [
@@ -55,29 +39,36 @@
   ],
   "vizyon": [
     {
-      "baslik": "",
-      "detay1": "",
-      "detay2": ""
+      "baslik": "Tarımın Geleceğine Yön Veren Güçlü ve Yenilikçi Vizyonumuz",
+      "detay1": "Tarım sektöründe yılların deneyimini geleceğe taşıyarak, çiftçilerin ve tarıma dayalı işletmelerin ihtiyaçlarına yönelik güvenilir, yenilikçi ve çevreye duyarlı çözümler sunmayı hedefliyoruz. Üretimini gerçekleştirdiğimiz her bir tarım aletinde, kaliteyi ve dayanıklılığı ön planda tutarak, müşterilerimize uzun ömürlü ve güvenilir ürünler sunmaktayız.",
+      "detay2": "Amacımız, tarım makineleri ve ekipmanları alanında lider bir marka olarak tanınmak ve sektördeki paydaşlarımıza ilham veren çözümler geliştirmektir. Üretim süreçlerimizi en son teknolojik gelişmelere uygun şekilde sürekli olarak iyileştirirken, sürdürülebilir tarım anlayışını da temel bir prensip olarak benimsiyoruz.",
+      "detay3": "Tarım sektörünün hızla gelişen ihtiyaçlarına uyum sağlamak için, yenilikçi yaklaşımlar geliştiriyor ve müşteri memnuniyetini her zaman ön planda tutuyoruz. Hem ülkemize hem de dünyaya daha verimli ve çevre dostu bir tarım geleceği bırakmayı amaçlıyoruz. Her adımda topluma, çevreye ve sektöre duyarlı bir şekilde hareket ederek, güvenle tercih edilen bir marka olmayı sürdüreceğiz."
     }
   ],
   "satisbirim": [
     {
-      "baslik": "",
+      "baslik": "satış birimi",
       "detay1": "",
-      "detay2": ""
+      "detay2": "",
+      "detay3": ""
     }
   ],
   "uretimbirim": [
     {
-      "baslik": "",
+      "baslik": "Üretim birimi",
       "detay1": "",
-      "detay2": ""
+      "detay2": "",
+      "detay3": ""
     }
   ],
   "bayilik": [
     {
       "marka": "",
       "detay1": ""
+    },
+    {
+      "Marka": "Volta",
+      "detay1": "Voltaaa"
     }
   ]
 }

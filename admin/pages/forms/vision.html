@@ -108,29 +108,66 @@
             <div class="card card-primary">
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form">
+              <form role="form" id="urunForm">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Başlık</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1">
+                    <label for="baslikid">Başlık</label>
+                    <input type="text" class="form-control" id="baslikid">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Açıklama Cümle 1</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1">
+                    <label for="aciklama1id">Açıklama Cümle 1</label>
+                    <input type="text" class="form-control" id="aciklama1id">
                   </div>
                   <div class="form-group">
-                    <div id="inputContainer">
-                        <!-- Yeni input alanları buraya eklenecek -->
-                    </div>
-                    <button id="addInputBtn" class="btn btn-primary">Yeni cümle ekle</button>
-                    
-                </div>
-            
-               
+                    <label for="aciklama2id">Açıklama Cümle 2</label>
+                    <input type="text" class="form-control" id="aciklama2id">
+                  </div>
+                  <div class="form-group">
+                    <label for="aciklama3id">Açıklama Cümle 3</label>
+                    <input type="text" class="form-control" id="aciklama3id">
+                  </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Kaydet</button>
                 </div>
+                <script>
+                  const form = document.getElementById("urunForm");
+                
+                  form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                
+                    const baslikc = document.getElementById("baslikid").value;
+                    const aciklama1c = document.getElementById("aciklama1id").value;
+                    const aciklama2c = document.getElementById("aciklama2id").value;
+                    const aciklama3c = document.getElementById("aciklama3id").value;
+                
+                    const hakkimizda = { baslik:baslikc, detay1: aciklama1c,detay2:aciklama2c,detay3:aciklama3c };
+                    const dataType = "vizyon";
+                    const cl ="1";
+                    try {
+                      const response = await fetch("http://localhost:3000/kaydet", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          clean:cl,
+                          tip:dataType,
+                          data:hakkimizda,
+                        }),
+                      });
+                
+                      if (response.ok) {
+                        alert("Ürün başarıyla kaydedildi!");
+                      } else {
+                        alert("Bir hata oluştu.");
+                      }
+                    } catch (error) {
+                      console.error("Hata:", error);
+                      alert("Sunucuya ulaşılamıyor.");
+                    }
+                  });
+                </script><script src="../../../kaydet.js"></script>
               </form>
             </div>
           </div>
@@ -140,24 +177,7 @@
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-  </div> <script>
-    // Buton ve input alanlarının bulunduğu container'ı seçiyoruz
-    const addInputBtn = document.getElementById('addInputBtn');
-    const inputContainer = document.getElementById('inputContainer');
-
-    // Buton tıklama olayını dinliyoruz
-    addInputBtn.addEventListener('click', (event) => {
-    event.preventDefault(); // Sayfa yenilenmesini önler
-    const newInput = document.createElement('input');
-    newInput.type = 'text';
-    newInput.id='exampleInputPassword1';
-    newInput.className='form-control';
-    newInput.placeholder = 'Yeni Cümle';
-    inputContainer.appendChild(newInput);
-    const lineBreak = document.createElement('br');
-            inputContainer.appendChild(lineBreak);
-});
-</script>
+  </div> 
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2024 <a href="">Emirhan Söbüoğlu</a>.</strong> All rights

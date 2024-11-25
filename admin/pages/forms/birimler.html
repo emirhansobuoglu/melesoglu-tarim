@@ -106,7 +106,7 @@
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <form role="form">
+              <form role="form" id="urunForm">
                 <div class="card card-success">
                     <div class="card-header">
                         <h3 class="card-title">Satış Birimi</h3>
@@ -114,18 +114,57 @@
                 </div>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Başlık</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1">
+                    <label for="baslikids">Başlık</label>
+                    <input type="text" class="form-control" id="baslikids">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Açıklama Cümle 1</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1">
+                    <label for="aciklama1ids">Açıklama Cümle 1</label>
+                    <input type="text" class="form-control" id="aciklama1ids">
                   </div>
                   <div class="form-group">
-                    <div id="inputContainer">
-                    </div>
-                    <button id="addInputBtn" class="btn btn-primary">Yeni cümle ekle</button>
-                </div>
+                    <label for="aciklama2ids">Açıklama Cümle 2</label>
+                    <input type="text" class="form-control" id="aciklama2ids">
+                  </div>
+                  <div class="form-group">
+                    <label for="aciklama3ids">Açıklama Cümle 3</label>
+                    <input type="text" class="form-control" id="aciklama3ids">
+                  </div>
+                  <script>
+                    const form = document.getElementById("urunForm");
+                  form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    const baslikc = document.getElementById("baslikids").value;
+                    const aciklama1c = document.getElementById("aciklama1ids").value;
+                    const aciklama2c = document.getElementById("aciklama2ids").value;
+                    const aciklama3c = document.getElementById("aciklama3ids").value;
+                
+                    const urun = {baslik:baslikc, detay1: aciklama1c,detay2:aciklama2c, detay3: aciklama3c };
+                    const dataType = "satisbirim";
+                    const cl ="1";
+                    try {
+                      const response = await fetch("http://localhost:3000/kaydet", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          clean:cl,
+                          tip:dataType,
+                          data:urun,
+                        }),
+                      });
+                
+                      if (response.ok) {
+                        alert("Bilgiler başarıyla kaydedildi!");
+                      } else {
+                        alert("Bir hata oluştu.");
+                      }
+                    } catch (error) {
+                      console.error("Hata:", error);
+                      alert("Sunucuya ulaşılamıyor.");
+                    }
+                  });
+                  </script>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Kaydet</button>
@@ -133,7 +172,7 @@
               </form>
             </div>
             <div class="card card-primary">
-                <form role="form">
+                <form role="form" id="uretForm">
                   <div class="card card-success">
                       <div class="card-header">
                           <h3 class="card-title">Üretim Birimi</h3>
@@ -141,18 +180,57 @@
                   </div>
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Başlık</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1">
+                      <label for="baslikidu">Başlık</label>
+                      <input type="text" class="form-control" id="baslikidu">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Açıklama Cümle 1</label>
-                      <input type="text" class="form-control" id="exampleInputPassword1">
+                      <label for="aciklama1idu">Açıklama Cümle 1</label>
+                      <input type="text" class="form-control" id="aciklama1idu">
                     </div>
                     <div class="form-group">
-                      <div id="inputContainer1">
-                      </div>
-                      <button id="addInputBtn1" class="btn btn-primary">Yeni cümle ekle</button>
-                  </div>
+                      <label for="aciklama2idu">Açıklama Cümle 2</label>
+                      <input type="text" class="form-control" id="aciklama2idu">
+                    </div>
+                    <div class="form-group">
+                      <label for="aciklama3idu">Açıklama Cümle 3</label>
+                      <input type="text" class="form-control" id="aciklama3idu">
+                    </div>
+                    <script>
+                      const formu = document.getElementById("uretForm");
+                      formu.addEventListener("submit", async (e) => {
+                      e.preventDefault();
+                      const baslikc = document.getElementById("baslikidu").value;
+                      const aciklama1c = document.getElementById("aciklama1idu").value;
+                      const aciklama2c = document.getElementById("aciklama2idu").value;
+                      const aciklama3c = document.getElementById("aciklama3idu").value;
+                  
+                      const urun = {baslik:baslikc, detay1: aciklama1c,detay2:aciklama2c, detay3: aciklama3c };
+                      const dataType = "uretimbirim";
+                      const cl ="1";
+                      try {
+                        const response = await fetch("http://localhost:3000/kaydet", {
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({
+                            clean:cl,
+                            tip:dataType,
+                            data:urun,
+                          }),
+                        });
+                  
+                        if (response.ok) {
+                          alert("Bilgiler başarıyla kaydedildi!");
+                        } else {
+                          alert("Bir hata oluştu.");
+                        }
+                      } catch (error) {
+                        console.error("Hata:", error);
+                        alert("Sunucuya ulaşılamıyor.");
+                      }
+                    });
+                    </script>
                   <!-- /.card-body -->
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Kaydet</button>
@@ -160,7 +238,7 @@
                 </form>
               </div>
               <div class="card card-primary">
-                <form role="form">
+                <form role="form" id="formbayi">
                   <div class="card card-success">
                       <div class="card-header">
                           <h3 class="card-title">Bayiliklerimiz</h3>
@@ -196,34 +274,49 @@
                       </div>
                       <button id="Bayiekle" class="btn btn-primary">Yeni Bayi ekle</button>
                   </div>
+                  <script>
+                    const formbayii = document.getElementById("formbayi");
+                    formbayii.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    const markac = document.getElementById("markaid").value;
+                    const aciklamac = document.getElementById("aciklamaid").value;
+                
+                    const urun = {marka:markac, detay1: aciklamac};
+                    const dataType = "bayilik";
+                    const cl ="0";
+                    try {
+                      const response = await fetch("http://localhost:3000/kaydet", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          clean:cl,
+                          tip:dataType,
+                          data:urun,
+                        }),
+                      });
+                
+                      if (response.ok) {
+                        alert("Bilgiler başarıyla kaydedildi!");
+                      } else {
+                        alert("Bir hata oluştu.");
+                      }
+                    } catch (error) {
+                      console.error("Hata:", error);
+                      alert("Sunucuya ulaşılamıyor.");
+                    }
+                  });
+                  </script>
                   <!-- /.card-body -->
-                  <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Kaydet</button>
-                  </div>
                 </form>
               </div>
           </div>
           <!--/.col (right) -->
         </div>
         <script>
-            // Buton ve input alanlarının bulunduğu container'ı seçiyoruz
-            const addInputBtn1 = document.getElementById('addInputBtn1');
-            const inputContainer1 = document.getElementById('inputContainer1');
-        
-            // Buton tıklama olayını dinliyoruz
-            addInputBtn1.addEventListener('click', (event) => {
-            event.preventDefault(); // Sayfa yenilenmesini önler
-            const newInput1 = document.createElement('input');
-            newInput1.type = 'text';
-            newInput1.id='exampleInputPassword1';
-            newInput1.className='form-control';
-            newInput1.placeholder = 'Yeni Cümle';
-            inputContainer1.appendChild(newInput1);
-            const lineBreak = document.createElement('br');
-                    inputContainer1.appendChild(lineBreak);
-
-            const Bayiekle = document.getElementById('Bayiekle');
-            const Bayiinput = document.getElementById('Bayiinput');});
+        const Bayiekle = document.getElementById('Bayiekle');
+            const Bayiinput = document.getElementById('Bayiinput');
         
             // Buton tıklama olayını dinliyoruz
             Bayiekle.addEventListener('click', (event) => {
@@ -232,20 +325,27 @@
             const aciklama = document.createElement('input');
             const lineBreak = document.createElement('br');
             const lineBreak1 = document.createElement('br');
+            const lineBreak2 = document.createElement('br');
+            const buton = document.createElement('button');
+            buton.type="submit";
+            buton.className="btn btn-primary";
+            buton.textContent="kaydet";
             newInput2.type = 'text';
-            newInput2.id='exampleInputPassword1';
+            newInput2.id='markaid';
             newInput2.className='form-control';
             newInput2.placeholder='Marka'
             aciklama.type = 'text';
-            aciklama.id='exampleInputPassword1';
+            aciklama.id='aciklamaid';
             aciklama.className='form-control';
             aciklama.placeholder='Aciklama'
             Bayiinput.appendChild(newInput2);
             Bayiinput.appendChild(lineBreak);
             Bayiinput.appendChild(aciklama);
             Bayiinput.appendChild(lineBreak1);
+            Bayiinput.appendChild(buton);
+            Bayiinput.appendChild(lineBreak2);
         });
-        </script>
+        </script><script src="../../../kaydet.js"></script>
         <!-- /.row -->
       </div>
     </section>
