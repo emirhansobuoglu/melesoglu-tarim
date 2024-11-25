@@ -108,37 +108,77 @@
             <div class="card card-primary">
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form">
+              <form role="form" id="urunForm">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email">
+                    <label for="emailid">Email</label>
+                    <input type="email" class="form-control" id="emailid" placeholder="email">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">İsim</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="İsim">
+                    <label for="isimid">İsim</label>
+                    <input type="text" class="form-control" id="isimid" placeholder="İsim">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Telefon No.</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="+90 555 55 55">
+                    <label for="telnoid">Telefon No.</label>
+                    <input type="text" class="form-control" id="telnoid" placeholder="+90 555 55 55">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Adres</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Adres">
+                    <label for="adresid">Adres</label>
+                    <input type="text" class="form-control" id="adresid" placeholder="Adres">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">İnstagram Link</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="link">
+                    <label for="instaid">İnstagram Link</label>
+                    <input type="text" class="form-control" id="instaid" placeholder="link">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Facebook Link</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="link">
+                    <label for="faceid">Facebook Link</label>
+                    <input type="text" class="form-control" id="faceid" placeholder="link">
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Kaydet</button>
                 </div>
+                <script>
+                  const form = document.getElementById("urunForm");
+                
+                  form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                
+                    const emailc = document.getElementById("emailid").value;
+                    const isimc = document.getElementById("isimid").value;
+                    const telnoc = document.getElementById("telnoid").value;
+                    const adresc = document.getElementById("adresid").value;
+                    const instac = document.getElementById("instaid").value;
+                    const facec = document.getElementById("faceid").value;
+                
+                    const hakkimizda = { email:emailc, isim: isimc,telno:telnoc,adres:adresc,instagram:instac,facebook:facec };
+                    const dataType = "hakkimda";
+                    const cl ="1";
+                    try {
+                      const response = await fetch("http://localhost:3000/kaydet", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          clean:cl,
+                          tip:dataType,
+                          data:hakkimizda,
+                        }),
+                      });
+                
+                      if (response.ok) {
+                        alert("Ürün başarıyla kaydedildi!");
+                      } else {
+                        alert("Bir hata oluştu.");
+                      }
+                    } catch (error) {
+                      console.error("Hata:", error);
+                      alert("Sunucuya ulaşılamıyor.");
+                    }
+                  });
+                </script><script src="../../../kaydet.js"></script>
               </form>
             </div>
           </div>

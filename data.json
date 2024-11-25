@@ -1,0 +1,83 @@
+{
+  "urunler": [
+    {
+      "id": 1,
+      "isim": "Meleşoğlu 3HP Çapa Mak.",
+      "fiyat": 7500,
+      "detay1": "Ürün kendi imalatımız olup, 2 yıl garanti süreci kapsamındadır. Büyük çapa makinalarının giremediği, kullanıcı için yorucu olan makinalara seçenek olrak üretilmiştir.",
+      "detay2": "Fidan dipleri, fasulye, çilek ve hobi bahçeleri için çok uygundur. Bıçakları özel olarak 3mm çelikten üretilmiştir.",
+      "detay3": "Direksiyon, boy ve çapalama derinlik ayarları yapılabilmektedir. Çapalama genişliği 40cm'dir. Motor gücü 3HP'dir. Yerden yüksekliği 100cm. Turuncu ve Kırmızı rengi mevcuttur.",
+      "detay4": "",
+      "detay5": ""
+    },
+    {
+      "id": 2,
+      "isim": "ECHO 621 SX",
+      "fiyat": 20000,
+      "detay1": "2 Yıl garantilidir. Güç : 3.32 kW / 4.5 Hp Pala : 50 cm Zincir : 3/8 - 36 diş Ağırlık (motor) : 6.2 kg Yağ Tipi : 2 zamanlı motor yağı",
+      "detay2": " 0,64 litrelik yakıt kapasitesi ile depoyu tam doldurduğunuzda uzun süreli işlemlerinize kesintisiz devam edebilirsiniz. Güvenli kullanımı destekler nitelikteki zincir freni, zincirin boşa dönmesini engellemeye yardım eder. Konforlu Tasarım Ön ve arka kısmında iki adet tutma yeri bulunur."
+    },
+    {
+      "id": 3,
+      "isim": "Hamur Karma Makinası",
+      "fiyat": 5000
+    }
+  ],
+  "hakkimda": [
+    {
+      "email": "asdasd@gmail.com",
+      "isim": "eeeeee",
+      "telno": "",
+      "adres": "",
+      "instagram": "",
+      "facebook": ""
+    }
+  ],
+  "kampanya": [
+    {
+      "baslik": "sssss",
+      "detay1": "sss",
+      "detay2": "sss",
+      "foto": ""
+    },
+    {
+      "baslik": "ddd",
+      "detay1": "dd",
+      "detay2": "dd",
+      "foto": ""
+    },
+    {
+      "baslik": "11",
+      "detay1": "11",
+      "detay2": "11",
+      "foto": ""
+    }
+  ],
+  "vizyon": [
+    {
+      "baslik": "",
+      "detay1": "",
+      "detay2": ""
+    }
+  ],
+  "satisbirim": [
+    {
+      "baslik": "",
+      "detay1": "",
+      "detay2": ""
+    }
+  ],
+  "uretimbirim": [
+    {
+      "baslik": "",
+      "detay1": "",
+      "detay2": ""
+    }
+  ],
+  "bayilik": [
+    {
+      "marka": "",
+      "detay1": ""
+    }
+  ]
+}
