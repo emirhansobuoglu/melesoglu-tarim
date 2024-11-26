@@ -104,11 +104,41 @@
         <div class="row">
           <!-- left column -->
           <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-body">
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <th>Başlık</th>
+                      <th>Detay1</th>
+                      <th>Detay2</th>
+                      <th>Foto</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tablokamp">
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet</td>
+                      <td>Win 95+</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet</td>
+                      <td>Win 95+</td>
+                    </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div> 
             <!-- general form elements -->
             <div class="card card-primary">
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="urunForm">
+                <div class="card card-success">
+                  <div class="card-header">
+                      <h3 class="card-title">Kampanya Ekle</h3>
+                    </div></div>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="baslikid">Başlık</label>
@@ -168,7 +198,7 @@
                       alert("Sunucuya ulaşılamıyor.");
                     }
                   });
-                </script><script src="../../../kaydet.js"></script>
+                </script><script src="../../../kaydet.js"></script><script src="getirkampanya.js"></script>
               </form>
             </div>
           </div>

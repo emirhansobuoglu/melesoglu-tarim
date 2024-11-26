@@ -113,19 +113,10 @@
                     <th>Başlık</th>
                     <th>Açıklama</th>
                     <th>Fiyat</th>
+                    <th>Foto</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet</td>
-                    <td>Win 95+</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet</td>
-                    <td>Win 95+</td>
-                  </tr>
+                  <tbody id="tablourun">
                 </tbody>
             </table>
         </div>
@@ -171,7 +162,7 @@
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Kaydet</button>
-                </div>
+                </div><script src="getirurunler.js"></script>
                 <script>
                   const form = document.getElementById("urunForm");
                   form.addEventListener("submit", async (e) => {

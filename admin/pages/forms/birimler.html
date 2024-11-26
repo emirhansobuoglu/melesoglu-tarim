@@ -245,24 +245,21 @@
                       </div>
                   </div><div class="card card-primary">
                     <div class="card-body">
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover">
                           <thead>
                           <tr>
-                            <th>Başlık</th>
+                            <th>Marka</th>
                             <th>Açıklama</th>
-                            <th>Fiyat</th>
                           </tr>
                           </thead>
-                          <tbody>
+                          <tbody id="bayilikler">
                           <tr>
                             <td>Trident</td>
                             <td>Internet</td>
-                            <td>Win 95+</td>
                           </tr>
                           <tr>
                             <td>Trident</td>
                             <td>Internet</td>
-                            <td>Win 95+</td>
                           </tr>
                         </tbody>
                     </table>
@@ -315,7 +312,7 @@
           <!--/.col (right) -->
         </div>
         <script>
-        const Bayiekle = document.getElementById('Bayiekle');
+            const Bayiekle = document.getElementById('Bayiekle');
             const Bayiinput = document.getElementById('Bayiinput');
         
             // Buton tıklama olayını dinliyoruz
@@ -350,24 +347,7 @@
       </div>
     </section>
     <!-- /.content -->
-  </div> <script>
-    // Buton ve input alanlarının bulunduğu container'ı seçiyoruz
-    const addInputBtn = document.getElementById('addInputBtn');
-    const inputContainer = document.getElementById('inputContainer');
-
-    // Buton tıklama olayını dinliyoruz
-    addInputBtn.addEventListener('click', (event) => {
-    event.preventDefault(); // Sayfa yenilenmesini önler
-    const newInput = document.createElement('input');
-    newInput.type = 'text';
-    newInput.id='exampleInputPassword1';
-    newInput.className='form-control';
-    newInput.placeholder = 'Yeni Cümle';
-    inputContainer.appendChild(newInput);
-    const lineBreak = document.createElement('br');
-            inputContainer.appendChild(lineBreak);
-});
-</script>
+  </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2024 <a href="">Emirhan Söbüoğlu</a>.</strong> All rights
@@ -381,7 +361,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+<script src="getirbirimler.js"></script>
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->

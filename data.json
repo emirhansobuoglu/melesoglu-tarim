@@ -1,39 +1,36 @@
 {
   "urunler": [
     {
-      "baslik": "sadada",
-      "detay1": "asdsad",
-      "detay2": "asdad",
-      "detay3": "adsadad"
+      "id": "",
+      "isim": "ECHO 621 SX Motorlu Testere",
+      "fiyat": "20000",
+      "detay1": "Güç : 3.32 kW / 4.5 Hp Pala : 50 cm Zincir : 3/8 - 36 diş Ağırlık (motor) : 6.2 kg Yağ Tipi : 2 zamanlı motor yağı",
+      "detay2": "0,64 litrelik yakıt kapasitesi ile depoyu tam doldurduğunuzda uzun süreli işlemlerinize kesintisiz devam edebilirsiniz.",
+      "detay3": "Güvenli kullanımı destekler nitelikteki zincir freni, zincirin boşa dönmesini engellemeye yardım eder. ",
+      "detay4": "Konforlu Tasarım Ön ve arka kısmında iki adet tutma yeri bulunur."
     }
   ],
   "hakkimda": [
     {
-      "email": "asdasd@gmail.com",
-      "isim": "eeeeee",
-      "telno": "",
-      "adres": "",
+      "email": "destek@melesoglu.com",
+      "isim": "Enes Turan",
+      "telno": "+90 544 326 70 63",
+      "adres": "Subaşı Cd. 5, 10800 Balıkesir,Dursunbey",
       "instagram": "",
       "facebook": ""
     }
   ],
   "kampanya": [
     {
-      "baslik": "sssss",
-      "detay1": "sss",
-      "detay2": "sss",
+      "baslik": "Yeni Ürünümüz Stoklarda!",
+      "detay1": "Hava Kompresörleri 100LT:4HP ve 50LT:2HP olmak üzere 2 çeşit olarak gelmiştir.",
+      "detay2": "",
       "foto": ""
     },
     {
-      "baslik": "ddd",
-      "detay1": "dd",
-      "detay2": "dd",
-      "foto": ""
-    },
-    {
-      "baslik": "11",
-      "detay1": "11",
-      "detay2": "11",
+      "baslik": "SGS Plus Sunta Kesme Makinasında Kampanya Sadece 1500₺",
+      "detay1": "2 Yıl Garanti.",
+      "detay2": "SGS5185 modeli 1500watt Temmuz Ayına özel fiyat.",
       "foto": ""
     }
   ],
@@ -47,28 +44,32 @@
   ],
   "satisbirim": [
     {
-      "baslik": "satış birimi",
-      "detay1": "",
-      "detay2": "",
-      "detay3": ""
+      "baslik": "Dursunbey Mağazamız",
+      "detay1": "Firmamızın satış mağazası, Balıkesir’in Dursunbey ilçesinde yer almaktadır.",
+      "detay2": "Yüksek kaliteli tarım makineleri ve ekipmanlarını yakından inceleyebileceğiniz 300 metrekare alana kurulmuş mağazamızda, uzman ekibimiz sizlere en iyi hizmeti sunmak için hazırdır.",
+      "detay3": "Ürünlerimizi yerinde görerek ihtiyaçlarınıza en uygun çözümleri kolayca bulabilirsiniz. Ayrıca mağazamızda web sitemizden farklı olan kampanyalar da bulunuyor. Siz değerli müşterilerimizi Dursunbey mağazamıza bekliyoruz!"
     }
   ],
   "uretimbirim": [
     {
-      "baslik": "Üretim birimi",
-      "detay1": "",
-      "detay2": "",
-      "detay3": ""
+      "baslik": "Fabrikamız",
+      "detay1": "Üretim birimimiz, tarım sektörünün ihtiyaçlarına uygun kaliteli ve dayanıklı ekipmanlar üretmek için titizlikle çalışmaktadır.",
+      "detay2": "Modern teknolojilerle donatılmış tesislerimizde, çapa makineleri, el arabaları, testereler ve diğer tarım aletlerinin üretimini uzman ekibimizle gerçekleştiriyoruz.",
+      "detay3": "Her ürünümüz, tarımda verimliliği artırmak ve uzun ömürlü kullanım sağlamak amacıyla özenle tasarlanmakta ve üretilmektedir. Müşterilerimize kaliteli ve güvenilir ürünler sunmak için üretimin her aşamasında detaylı kontroller yapıyoruz."
     }
   ],
   "bayilik": [
     {
-      "marka": "",
-      "detay1": ""
+      "marka": "Husqvarna",
+      "detay1": "Husqvarna markasının kesim motorları ve tüm yedek parçaları için bize ulaşabilirsiniz."
     },
     {
-      "Marka": "Volta",
-      "detay1": "Voltaaa"
+      "marka": "Volta",
+      "detay1": "Volta markasının tüm motorları ve yedek parçaları için bize ulaşabilirsiniz."
+    },
+    {
+      "marka": "Solax",
+      "detay1": "Solax markasının ürünleri ve yedek parçaları için bize ulaşabilirsiniz."
     }
   ]
 }
