@@ -70,6 +70,22 @@
     {
       "marka": "Solax",
       "detay1": "Solax markasının ürünleri ve yedek parçaları için bize ulaşabilirsiniz."
+    },
+    {
+      "marka": "SGS",
+      "detay1": "SGS markasının ürünleri ve yedek parçaları için bize ulaşabilirsiniz."
+    },
+    {
+      "marka": "Bartech",
+      "detay1": "Bartech markasının kesim motorları ve tüm yedek parçaları için bize ulaşabilirsiniz."
+    },
+    {
+      "marka": "Echo",
+      "detay1": "Echo markasının kesim motorları ve tüm yedek parçaları için bize ulaşabilirsiniz."
+    },
+    {
+      "marka": "a",
+      "detay1": "b"
     }
   ]
 }

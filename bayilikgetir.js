@@ -1,14 +1,25 @@
-const footer = document.getElementById('footerul');
-const faceh = document.getElementById('faceid');
-const instah = document.getElementById('instaid');
+const markas = document.getElementById('markalar');
+const footer = document.getElementById('footer');
+const faceh = document.getElementById('faceidd');
+const instah = document.getElementById('instaidd');
 const url = "data.json"
 
 fetch(url)
 .then(rep=>rep.json())
 .then(data =>{
-    outDatafooter(data.hakkimda);
+    outData(data.bayilik);
+    outDatafooter(data.hakkimda)
 })
 
+function outData(val){
+    console.log(val);
+    let paragrafs ='';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        paragrafs+=`<li><h3>${ele.marka}</h3><p>${ele.detay1}</p></li><br> `;
+    });
+    markas.innerHTML=paragrafs;
+}
 function outDatafooter(val){
     console.log(val);
     let footerc ='';

@@ -1,14 +1,30 @@
+const baslik = document.getElementById('baslik');
+const paragraf = document.getElementById('paragraf');
 const footer = document.getElementById('footerul');
 const faceh = document.getElementById('faceid');
 const instah = document.getElementById('instaid');
 const url = "data.json"
 
+
 fetch(url)
 .then(rep=>rep.json())
 .then(data =>{
-    outDatafooter(data.hakkimda);
+    outData(data.vizyon);
+    outDatafooter(data.hakkimda)
 })
 
+function outData(val){
+    console.log(val);
+    let basliks ='';
+    let paragrafs ='';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        paragrafs+=`${ele.detay1}<br> ${ele.detay2}<br> ${ele.detay3}`;
+        basliks+=`${ele.baslik}`;
+    });
+    baslik.innerHTML=basliks;
+    paragraf.innerHTML=paragrafs;
+}
 function outDatafooter(val){
     console.log(val);
     let footerc ='';
