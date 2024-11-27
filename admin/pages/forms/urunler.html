@@ -112,6 +112,7 @@
                   <tr>
                     <th>Başlık</th>
                     <th>Açıklama</th>
+                    <th>Kategori</th>
                     <th>Fiyat</th>
                     <th>Foto</th>
                   </tr>
@@ -154,11 +155,20 @@
                         <label for="aciklama4id">Açıklama Cümle 4</label>
                         <input type="text" class="form-control" id="aciklama4id">
                       </div>
-                    <div class="form-group">
-                      <label for="fotoid">Fotoğraf</label><br>
-                      <input type="file" id="resim" name="fotoid" accept="image/*"><br>
-                    </div>
-                  </div>
+                      <div class="form-group">
+                        <label for="kategori">Kategori Seçimi:</label>
+                        <select id="kategori" class="form-control" name="kategori">
+                          <option value="capa">Çapa Makinesi</option>
+                          <option value="el">El Aletleri</option>
+                          <option value="testere">Testere</option>
+                          <option value="diger">Diğer</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="fotoid">Fotoğraf</label><br>
+                        <input type="text" id="resim" name="fotoid"><br>
+                      </div>
+                </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Kaydet</button>
@@ -173,9 +183,9 @@
                     const aciklama2c = document.getElementById("aciklama2id").value;
                     const aciklama3c = document.getElementById("aciklama3id").value;
                     const aciklama4c = document.getElementById("aciklama4id").value;
-                    // const fotoc = document.getElementById("fotoid").value;
-                
-                    const urun = { id:"",isim:baslikc,fiyat:fiyatc, detay1: aciklama1c,detay2:aciklama2c, detay3: aciklama3c,detay4:aciklama4c };
+                    const fotoc = document.getElementById("resim").value;
+                    const kategoric = document.getElementById("kategori").value;
+                    const urun = {isim:baslikc,fiyat:fiyatc,kategori:kategoric, detay1: aciklama1c,detay2:aciklama2c, detay3: aciklama3c,detay4:aciklama4c,foto:fotoc };
                     const dataType = "urunler";
                     const cl ="0";
                     try {
@@ -205,24 +215,6 @@
               </form>
             </div>
           </div>
-          <script>
-            // Buton ve input alanlarının bulunduğu container'ı seçiyoruz
-            const addInputBtn = document.getElementById('addInputBtn');
-            const inputContainer = document.getElementById('inputContainer');
-        
-            // Buton tıklama olayını dinliyoruz
-            addInputBtn.addEventListener('click', (event) => {
-            event.preventDefault(); // Sayfa yenilenmesini önler
-            const newInput = document.createElement('input');
-            newInput.type = 'text';
-            newInput.id='exampleInputPassword1';
-            newInput.className='form-control';
-            newInput.placeholder = 'Yeni Cümle';
-            inputContainer.appendChild(newInput);
-            const lineBreak = document.createElement('br');
-                    inputContainer.appendChild(lineBreak);
-        });
-        </script>
           <!--/.col (right) -->
         </div>
         <!-- /.row -->

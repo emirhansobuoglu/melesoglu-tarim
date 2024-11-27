@@ -1,13 +1,24 @@
 {
   "urunler": [
     {
-      "id": "",
       "isim": "ECHO 621 SX Motorlu Testere",
       "fiyat": "20000",
+      "kategori": "testere",
       "detay1": "Güç : 3.32 kW / 4.5 Hp Pala : 50 cm Zincir : 3/8 - 36 diş Ağırlık (motor) : 6.2 kg Yağ Tipi : 2 zamanlı motor yağı",
       "detay2": "0,64 litrelik yakıt kapasitesi ile depoyu tam doldurduğunuzda uzun süreli işlemlerinize kesintisiz devam edebilirsiniz.",
       "detay3": "Güvenli kullanımı destekler nitelikteki zincir freni, zincirin boşa dönmesini engellemeye yardım eder. ",
-      "detay4": "Konforlu Tasarım Ön ve arka kısmında iki adet tutma yeri bulunur."
+      "detay4": "Konforlu Tasarım Ön ve arka kısmında iki adet tutma yeri bulunur.",
+      "foto": "assets/img/products/echo.png"
+    },
+    {
+      "isim": "Meleşoğlu 4.5HP Tekerlekli Çapa Makinası",
+      "fiyat": "10000",
+      "kategori": "capa",
+      "detay1": "Ürün kendi imalatımız olup, 2 yıl garanti süreci kapsamındadır.",
+      "detay2": "Taşıma kolaylığı açısından makinamıza tekerlek eklenmiştir.",
+      "detay3": "Direksiyon, boy ve çapalama derinlik ayarları yapılabilmektedir. ",
+      "detay4": "Çapalama genişliği 40cm'dir. Motor gücü 3HP'dir. Yerden yüksekliği 100cm. Turuncu rengi mevcuttur.",
+      "foto": "assets/img/products/capamak4-5.png"
     }
   ],
   "hakkimda": [

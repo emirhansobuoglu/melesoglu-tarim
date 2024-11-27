@@ -11,9 +11,8 @@ function outData(val){
     let tabloc ="";
     val.forEach((ele,ind) => {
             console.log(ele);
-            tabloc+=`<tr><td>${ele.isim}</td><td>${ele.detay1} ${ele.detay2} ${ele.detay3} ${ele.detay4}</td><td>${ele.fiyat}</td><td>${ele.foto}</td>
+            tabloc+=`<tr><td>${ele.isim}</td><td>${ele.detay1} ${ele.detay2} ${ele.detay3} ${ele.detay4}</td><td>${ele.kategori}</td><td>${ele.fiyat}</td><td>${ele.foto}</td>
                             <td><button class="btn-danger" onclick="sil('${ele.isim}')">Sil</button></td></tr>`
-        
     });
     tablo.innerHTML=tabloc;
 }
