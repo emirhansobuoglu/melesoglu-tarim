@@ -34,6 +34,7 @@
 </head>
 <body>
 	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<!--PreLoader-->
     <div class="loader">
         <div class="loader-inner">
@@ -252,29 +253,62 @@
 	<section class="cart-banner pt-100 pb-100">
     	<div class="container">
         	<div class="row clearfix">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">	
+						<h3><span class="orange-text">İstatistikler</span></h3>
+					</div>
+				</div>
             	<!--Image Column-->
             	<div class="image-column col-lg-6">
                 	<div class="image">
-                    	<div class="price-box">
-                        	<div class="inner-price">
-                                <span class="price">
-                                    <strong>30%</strong> <br> off per kg
-                                </span>
-                            </div>
-                        </div>
-                    	<img src="assets/img/a.jpg" alt="">
+                    	<img src="assets/img/a.png" alt="">
                     </div>
                 </div>
                 <!--Content Column-->
                 <div class="content-column col-lg-6">
-					<h3><span class="orange-text">Deal</span> of the month</h3>
-                    <h4>Hikan Strwaberry</h4>
-                    <div class="text">Quisquam minus maiores repudiandae nobis, minima saepe id, fugit ullam similique! Beatae, minima quisquam molestias facere ea. Perspiciatis unde omnis iste natus error sit voluptatem accusant</div>
-                    <!--Countdown Timer-->
-                    <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2020/2/01"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div>
-                	<a href="cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					<canvas id="salesChart" width="400" height="300"></canvas>
+<script>
+  const ctx = document.getElementById('salesChart').getContext('2d');
+  const salesChart = new Chart(ctx, {
+      type: 'bar', // 'line', 'pie', vb.
+      data: {
+          labels: ['Çapa Makineleri', 'Testereler', 'El Aletleri', 'Diğer'],
+          datasets: [{
+              label: 'Satış Oranları(%)',
+              data: [30, 25, 20, 25],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+
                 </div>
-            </div>
+				
+            </div><br><br>
+			<div class="row">
+					<div class="col-lg-12 text-center">
+						<a href="about.html" class="boxed-btn">Daha Fazla</a>
+					</div>
+				</div>
         </div>
     </section>
     <!-- end cart banner section -->
@@ -476,6 +510,8 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
+
+
 
 </body>
 </html>

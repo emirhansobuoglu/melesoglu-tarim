@@ -33,8 +33,15 @@
 
 </head>
 <body>
-	
-	<!--PreLoader-->
+	<style>
+        .chart-container {
+            display: flex;
+            justify-content: space-around; /* Grafikler arasında boşluk bırakır */
+            align-items: center; /* Dikey hizalama */
+            gap: 20px; /* İki grafik arasındaki boşluk */
+        }
+    </style>
+	<!--PreLoader--><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="loader">
         <div class="loader-inner">
             <div class="circle"></div>
@@ -55,13 +62,12 @@
 							</a>
 						</div>
 						<!-- logo -->
-
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="index_2.html">Ana Sayfa</a>
+								<li><a href="index_2.html">Ana Sayfa</a>
 								</li>
-								<li><a href="about.html">Hakkımızda</a></li>
+								<li class="current-list-item"><a href="about.html">Hakkımızda</a></li>
 								<li><a href="news.html">Kampanyalar</a></li>
 								<li><a href="vision.html">Vizyonumuz</a></li>
 								<li><a href="shop.html">Ürünlerimiz</a>
@@ -189,6 +195,101 @@
 			</div>
 		</div>
 	</div>
+	<div class="mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">	
+						<h3><span class="orange-text">İstatistikler</span></h3>
+					</div>
+				</div>
+			</div>
+			<table>
+				<tr>
+					<th><div class="content text-center">	
+						<h3 class="pb-3">Satış-Ürün Oranları</h3>
+					</div></th>
+					<th><br>||</th>
+					<th><div class="content text-center">	
+						<h3 class="pb-3">Satış-Bölge Oranları</h3>
+					</div></th>
+				</tr>
+				<tr>
+					<td><div class="single-product-item">
+						<canvas id="salesChart" width="500" height="500"></canvas></div>
+					</td>
+					<td><br>-</td>
+					<td><div class="single-product-item">
+						<canvas id="pasta" width="500" height="300"></canvas></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script>
+	  const ctx = document.getElementById('salesChart').getContext('2d');
+	  const pst = document.getElementById('pasta').getContext('2d');
+	  const salesChart = new Chart(ctx, {
+		  type: 'bar',
+		  data: {
+			  labels: ['Çapa Makineleri', 'Testereler', 'El Aletleri', 'Diğer'],
+			  datasets: [{
+				  label: 'Satış Oranları(%)',
+				  data: [30, 25, 20, 25],
+				  backgroundColor: [
+					  'rgba(255, 99, 132, 0.2)',
+					  'rgba(54, 162, 235, 0.2)',
+					  'rgba(255, 206, 86, 0.2)',
+					  'rgba(75, 192, 192, 0.2)'
+				  ],
+				  borderColor: [
+					  'rgba(255, 99, 132, 1)',
+					  'rgba(54, 162, 235, 1)',
+					  'rgba(255, 206, 86, 1)',
+					  'rgba(75, 192, 192, 1)'
+				  ],
+				  borderWidth: 1
+			  }]
+		  },
+		  options: {
+			  scales: {
+				  y: {
+					  beginAtZero: true
+				  }
+			  }
+		  }
+	  });
+	  const pasta = new Chart(pst, {
+		  type: 'pie',
+		  data: {
+			  labels: ['Marmara', 'Ege', 'İç Anadolu', 'Diğer'],
+			  datasets: [{
+				  label: 'Satış Oranları',
+				  data: [100, 160, 60, 40],
+				  backgroundColor: [
+					  'rgba(54, 50, 235, 0.2)',
+					  'rgba(255, 10, 10, 0.2)',
+					  'rgba(255, 255, 10, 0.2)',
+					  'rgba(75, 255, 75, 0.2)'
+				  ],
+				  borderColor: [
+					  'rgba(54, 50, 235, 1)',
+					  'rgba(255, 10, 10, 1)',
+					  'rgba(255, 255, 10, 1)',
+					  'rgba(75, 255, 75, 1)'
+				  ],
+				  borderWidth: 1
+			  }]
+		  },
+		  options: {
+			  scales: {
+				  y: {
+					  beginAtZero: true
+				  }
+			  }
+		  }
+	  });
+	</script>
 	<!-- end featured section -->
 
 
