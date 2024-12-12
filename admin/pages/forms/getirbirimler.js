@@ -70,7 +70,7 @@ function outData(val){
 async function sil(markaa) {
     const dataType = "bayilik";
     try {
-        const response = await fetch("http://localhost:3000/sil", {
+        const response = await fetch("https://melesoglu-tarim.onrender.com/sil", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
