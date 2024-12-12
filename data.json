@@ -23,7 +23,7 @@
   ],
   "hakkimda": [
     {
-      "email": "destek@melesoglu.com",
+      "email": "eenesturann@gmail.com",
       "isim": "Enes Turan",
       "telno": "+90 544 326 70 63",
       "adres": "Subaşı Cd. 5, 10800 Balıkesir,Dursunbey",
@@ -70,6 +70,14 @@
     }
   ],
   "bayilik": [
+    {
+      "marka": "Rodex",
+      "detay1": "Rodex markasının kesim motorları ve tüm yedek parçaları için bize ulaşabilirsiniz."
+    },
+    {
+      "marka": "Meleşoğlu",
+      "detay1": "Meleşoğlu markasının kesim motorları ve tüm yedek parçaları için bize ulaşabilirsiniz."
+    },
     {
       "marka": "Husqvarna",
       "detay1": "Husqvarna markasının kesim motorları ve tüm yedek parçaları için bize ulaşabilirsiniz."
